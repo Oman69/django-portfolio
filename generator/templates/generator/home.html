@@ -1,0 +1,44 @@
+{% extends 'port/base.html' %}
+{% block title %}Password Generator{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Password Generator</h1>
+    <form action="{% url 'generator:password' %}">
+        <select name="length">
+            <option value="10">10</option>
+            <option value="9">9</option>
+            <option value="8" selected="selected">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+
+
+        </select> Длина пароля
+        <br>
+        <select name="amount">
+            <option value="10">10</option>
+            <option value="9">9</option>
+            <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5"  selected="selected">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select> Количество паролей
+        <br>
+        <input type="checkbox" name="uppercase"> Uppercase
+        <br>
+        <input type="checkbox" name="numbers"> Numbers
+        <br>
+        <input type="checkbox" name="symbols"> Symbols
+        <br>
+        <input type="submit" value="Generate" class="btn btn-primary">
+    </form>
+</div>
+{% endblock %}
