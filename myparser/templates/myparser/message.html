@@ -1,0 +1,11 @@
+{% extends 'port/base.html' %}
+{% block title %}Result Parsing{% endblock %}
+{% block content %}
+<div class="container">
+    <p>Спарсили {{ message }} страниц</p>
+    <p>Получено {{ parser }} объектов недвижимости</p>
+    <a href="{% url 'myparser:parser' %}"><input type="submit"  value="Вернуться на страницу Парсера" class="btn btn-warning"></a>
+</div>
+
+
+{% endblock %}

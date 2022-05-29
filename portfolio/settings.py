@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'port', 'blog', 'generator',
+    'myparser'
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
+
+try:
+    from .local_settigs import *
+except ImportError:
+    raise ImportError

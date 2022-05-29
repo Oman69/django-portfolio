@@ -1,0 +1,16 @@
+{% extends 'port/base.html' %}
+{% block title %}Realty Parser{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Realty Parser</h1>
+    <form action="{% url 'myparser:message' %}">
+        <br>
+        <p>Enter link from site: <a href="https://tver.etagi.com/" target="_blank">etagi.com</a></p>
+        <input type="text" name="link" placeholder="Link">
+        <br>
+        <br>
+        <input type="submit" value="Start Parsing" class="btn btn-primary">
+    </form>
+
+</div>
+{% endblock %}
